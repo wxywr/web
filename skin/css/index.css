@@ -1,0 +1,5 @@
+*{margin: 0;padding: 0;}
+body{background: #fff;
+	 font:12px/1.125 Microsoft YaHei;}
+.wrap{width: 400px;height: 50px;margin: 10% auto;}
+.btn{width: 110px;height: 40px;margin: 5px 10px;}

@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>切换皮肤</title>
-<link rel="stylesheet"  href="css/index.css" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>切换皮肤</title>
+	<link rel="stylesheet"  href="css/index.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
 </head>
-<body>
-    
+<body id="all">
+<div class="wrap">
+	<button type="button" class="btn btn-primary" id="blue" onclick="blues()">默认</button>
+	<button type="button" class="btn btn-warning" id="yellow" onclick="yellows()">黄色</button>
+	<button type="button" class="btn btn-success" id="green" onclick="greens()">绿色</button>
+</div>
+<script>
+	var blue = document.getElementById('blue');
+	var yellow = document.getElementById('yellow');
+	var green = document.getElementById('green');
+	var all = document.getElementById('all');
+	function blues(){
+		all.style.backgroundColor="#69c";
+	};
+	function yellows(){
+		all.style.backgroundColor="yellow";
+	}
+	function greens(){
+		all.style.backgroundColor="#0f0";
+	}
+</script>
 </body>
 </html>
