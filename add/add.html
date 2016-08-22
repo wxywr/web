@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加或删除</title>
+</head>
+<body>
+	<table border="1" width="50%" id="table">
+		<tr>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td>xh001</td>
+			<td>王小二</td>
+			<td><a href="javascript:;" onclick="del(this)">删除</a></td>
+			 <!--在删除按钮上添加点击事件  -->
+		</tr>
+		<tr>
+			<td>xh002</td>
+			<td>刘小芳</td>
+			<td><a href="javascript:;" onclick="del(this)">删除</a></td>   
+			<!--在删除按钮上添加点击事件  -->
+	   </tr> 
+	</table><br/>
+	<input type="button" value="添加一行" onclick="addTr()">
+	<!--在添加按钮上添加点击事件  -->
+
+	<script type="text/javascript"> 
+      	window.onload = function(){
+      	// 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色
+        	var x=document.getElementsByTagName("tr");
+        	for(i=0;i<x.length;i++){
+            	bgcchange(x[i]);
+        	}
+     	}
+    	function bgcchange(obj){
+        	obj.onmouseover=function(){
+            	obj.style.backgroundColor="red";
+        	} 
+        	obj.onmouseout=function(){
+            	obj.style.backgroundColor="#fff";
+        	}
+     	}
+
+      	// 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+      	function addTr(){
+    		var par=document.getElementById("table");
+    		var row1=document.createElement("tr");
+    		var td1=document.createElement("td");
+   			td1.innerHTML="Number";
+    		var td2=document.createElement("td");
+    		td2.innerHTML="Name";
+    		var td3=document.createElement("td");
+    		td3.innerHTML="<a href='javascript:;' onclick='del(this)'>删除</a>"
+    		par.appendChild(row1);
+   			row1.appendChild(td1);
+    		row1.appendChild(td2);
+    		row1.appendChild(td3);
+    	}
+
+      	// 创建删除函数
+      	function del(obj){
+      		var tr=obj.parentNode.parentNode;
+      		tr.parentNode.removeChild(tr);
+      	}
+	</script>
+</body>
+</html>
