@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片遮罩下拉</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		img{margin: 20px;}
+		.rotate{transition: transform 0.3s;}
+		.rotate:hover{transform: rotateY(180deg);}
+		.layer{width: 304px;height: 205px;background: #6D6868;opacity: 0.6;
+			   position: absolute;left: 370px;top: 20px;display: none;z-index: 1}
+		.begin{font-size: 18px;color: #fff;background: red;border: none;
+			   display: block;padding: 5px;margin: 80px auto;}
+	</style>
+	<script src="js/jquery-3.0.0.js"></script>
+	<script src="js/pull.js"></script>
+</head>
+<body>
+	<img src="img/a.jpg" alt="" class="rotate">
+	<img src="img/b.jpg" alt="" class="down">
+	<div class="layer"><button class="begin">开始游戏</button></div>
+</body>
+</html>
